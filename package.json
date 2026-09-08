@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "description": "Parse SPDX, CycloneDX, generate-license-file, and Black Duck notices output into one normalized model, with React components to search, group, and diff third-party license disclosures.",
   "license": "MIT",
-  "author": "Amit Sharma",
+  "author": "Amitt K Sharma",
   "repository": {
     "type": "git",
-    "url": "http://mygithub.com"
+    "url": "git+https://github.com/amittkSharma/foss-notices-veiwer"
   },
-  "homepage": "http://mygithub.com",
+  "homepage": "https://github.com/amittkSharma/foss-notices-veiwer",
   "bugs": {
-    "url": "http://mygithub.com"
+    "url": "https://github.com/amittkSharma/foss-notices-veiwer/issues"
   },
   "type": "module",
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "engines": {
     "node": ">=18"
   },
@@ -48,7 +50,9 @@
     "./styles.css": "./dist/styles.css",
     "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
     "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
