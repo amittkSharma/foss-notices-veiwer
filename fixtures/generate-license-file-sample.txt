@@ -1,0 +1,66 @@
+This file was generated with the generate-license-file npm package!
+https://www.npmjs.com/package/generate-license-file
+
+The following npm package may be included in this product:
+
+ - left-pad@1.3.0
+
+This package contains the following license:
+
+MIT License
+
+Copyright (c) 2014 James Halliday
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions.
+
+-----------
+
+The following npm packages may be included in this product:
+
+ - express@4.19.2
+ - body-parser@1.20.2
+
+These packages each contain the following license:
+
+MIT License
+
+Copyright (c) 2014-2024 TJ Holowaychuk and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions.
+
+-----------
+
+The following npm package may be included in this product:
+
+ - some-apache-lib@2.1.0
+
+This package contains the following license:
+
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction, and
+distribution as defined by Sections 1 through 9 of this document.
+
+With the following notices:
+This product includes software developed by Example Corp.
+
+-----------
+
+This file was generated with the generate-license-file npm package!
+https://www.npmjs.com/package/generate-license-file

@@ -1,0 +1,30 @@
+This file was generated with the generate-license-file npm package!
+https://www.npmjs.com/package/generate-license-file
+
+The following npm package may be included in this product:
+
+- left-pad@1.3.0
+
+This package contains the following license:
+MIT License
+
+Copyright (c) 2014 James Halliday
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction.
+-----------------------------------------------------------
+
+The following npm package may be included in this product:
+
+- express
+
+Apache License 2.0
+
+Copyright (c) 2024 Express contributors
+
+Licensed under the Apache License, Version 2.0.
+-----------------------------------------------------------
+
+This file was generated with the generate-license-file npm package!
+https://www.npmjs.com/package/generate-license-file

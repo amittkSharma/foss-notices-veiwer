@@ -1,0 +1,69 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "dataLicense": "CC0-1.0",
+  "name": "foss-notices-viewer-sample",
+  "creationInfo": {
+    "created": "2026-08-01T00:00:00Z",
+    "creators": ["Tool: foss-notices-viewer-fixtures"]
+  },
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-left-pad",
+      "name": "left-pad",
+      "versionInfo": "1.3.0",
+      "licenseConcluded": "MIT",
+      "copyrightText": "Copyright (c) 2014 James Halliday",
+      "downloadLocation": "https://registry.npmjs.org/left-pad/-/left-pad-1.3.0.tgz",
+      "homepage": "https://github.com/stevemao/left-pad",
+      "originator": "Person: James Halliday (mail@substack.net)",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/left-pad@1.3.0"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-express",
+      "name": "express",
+      "versionInfo": "4.19.2",
+      "licenseConcluded": "MIT",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "https://registry.npmjs.org/express/-/express-4.19.2.tgz",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceType": "purl",
+          "referenceLocator": "pkg:npm/express@4.19.2"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-some-gpl-tool",
+      "name": "some-gpl-tool",
+      "versionInfo": "2.0.0",
+      "licenseConcluded": "GPL-3.0-or-later",
+      "copyrightText": "Copyright (c) 2020 Some Author",
+      "downloadLocation": "NOASSERTION"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Package-left-pad",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relatedSpdxElement": "SPDXRef-Package-express",
+      "relationshipType": "DEPENDS_ON"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-express",
+      "relatedSpdxElement": "SPDXRef-Package-some-gpl-tool",
+      "relationshipType": "DEPENDS_ON"
+    }
+  ]
+}

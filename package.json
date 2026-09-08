@@ -1,0 +1,116 @@
+{
+  "name": "foss-notices-viewer",
+  "version": "0.1.0",
+  "description": "Parse SPDX, CycloneDX, generate-license-file, and Black Duck notices output into one normalized model, with React components to search, group, and diff third-party license disclosures.",
+  "license": "MIT",
+  "author": "Amit Sharma",
+  "repository": {
+    "type": "git",
+    "url": "http://mygithub.com"
+  },
+  "homepage": "http://mygithub.com",
+  "bugs": {
+    "url": "http://mygithub.com"
+  },
+  "type": "module",
+  "sideEffects": ["*.css"],
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "foss-notices-viewer": "./dist/cli.js",
+    "fnv": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./validation": {
+      "types": "./dist/validation.d.ts",
+      "import": "./dist/validation.js",
+      "require": "./dist/validation.cjs"
+    },
+    "./export": {
+      "types": "./dist/export.d.ts",
+      "import": "./dist/export.js",
+      "require": "./dist/export.cjs"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "release": "commit-and-tag-version",
+    "release:dry-run": "commit-and-tag-version --dry-run",
+    "demo": "npm --prefix examples run dev",
+    "demo:build": "npm --prefix examples run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "commander": "^13.1.0",
+    "exceljs": "^4.4.0",
+    "json-source-map": "^0.6.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/json-source-map": "^0.6.0",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "commit-and-tag-version": "^13.1.2",
+    "jsdom": "^25.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  },
+  "keywords": [
+    "foss",
+    "sbom",
+    "spdx",
+    "cyclonedx",
+    "license",
+    "notices",
+    "third-party-notices",
+    "black-duck",
+    "react",
+    "cli"
+  ]
+}

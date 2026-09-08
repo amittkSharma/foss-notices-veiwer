@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      // Mirrors vitest.config.ts's alias: there's no real node_modules/foss-notices-viewer
+      // self-link in this dev repo, so tsup's `dts` step (unlike Node at runtime, or a real
+      // consumer's own node_modules) can't otherwise resolve this package's own published-name
+      // specifier back to itself — see DEVELOPMENT.md's "Cross-entry dynamic imports".
+      "foss-notices-viewer/validation": ["./src/validation/index.ts"]
+    },
+    "jsx": "react-jsx",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "noUncheckedIndexedAccess": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["node", "@testing-library/jest-dom"]
+  },
+  "include": ["src"]
+}
