@@ -10,7 +10,7 @@ function run(argv: string[]) {
 }
 
 function output(log: ReturnType<typeof vi.spyOn>): string {
-  return log.mock.calls.map((call) => call.join(" ")).join("\n");
+  return log.mock.calls.map((call: unknown[]) => call.join(" ")).join("\n");
 }
 
 describe("diff", () => {

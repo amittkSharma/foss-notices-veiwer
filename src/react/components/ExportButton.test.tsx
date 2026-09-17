@@ -7,13 +7,18 @@ import { ExportButton } from "./ExportButton";
 const document: NoticesDocument = {
   source: "unknown",
   components: [
-    { name: "left-pad", version: "1.3.0", licenses: [{ id: "MIT", name: "MIT" }], copyrights: [] },
+    {
+      name: "left-pad",
+      version: "1.3.0",
+      licenses: [{ id: "MIT", name: "MIT" }],
+      copyrights: [],
+    },
   ],
 };
 
 describe("ExportButton", () => {
-  let createObjectURL: ReturnType<typeof vi.fn>;
-  let revokeObjectURL: ReturnType<typeof vi.fn>;
+  let createObjectURL: ReturnType<typeof vi.fn<typeof URL.createObjectURL>>;
+  let revokeObjectURL: ReturnType<typeof vi.fn<typeof URL.revokeObjectURL>>;
   let clickSpy: ReturnType<typeof vi.spyOn>;
   let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
 

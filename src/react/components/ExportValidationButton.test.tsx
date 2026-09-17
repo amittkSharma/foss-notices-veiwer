@@ -13,8 +13,8 @@ const report: ValidationReport = {
 };
 
 describe("ExportValidationButton", () => {
-  let createObjectURL: ReturnType<typeof vi.fn>;
-  let revokeObjectURL: ReturnType<typeof vi.fn>;
+  let createObjectURL: ReturnType<typeof vi.fn<typeof URL.createObjectURL>>;
+  let revokeObjectURL: ReturnType<typeof vi.fn<typeof URL.revokeObjectURL>>;
   let clickSpy: ReturnType<typeof vi.spyOn>;
   let consoleErrorSpy: ReturnType<typeof vi.spyOn>;
 
