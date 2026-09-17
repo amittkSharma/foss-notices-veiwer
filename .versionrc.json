@@ -14,7 +14,7 @@
     { "type": "ci", "hidden": true }
   ],
   "scripts": {
-    "prebump": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "prebump": "npm run lint:fix &&npm run lint && npm run typecheck && npm run test && npm run build",
     "postbump": "git add package.json .versionrc.json",
     "postbump:minor": "git add package.json .versionrc.json",
     "postbump:major": "git add package.json .versionrc.json"
