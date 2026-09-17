@@ -13,9 +13,7 @@
     "url": "https://github.com/amittkSharma/foss-notices-veiwer/issues"
   },
   "type": "module",
-  "sideEffects": [
-    "*.css"
-  ],
+  "sideEffects": ["*.css"],
   "engines": {
     "node": ">=18"
   },
@@ -50,9 +48,7 @@
     "./styles.css": "./dist/styles.css",
     "./package.json": "./package.json"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "prepublishOnly": "npm run lint && npm run typecheck && npm run test && npm run build",
     "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
@@ -85,7 +81,7 @@
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "commander": "^13.1.0",
-    "exceljs": "^4.4.0",
+    "exceljs": "^3.4.0",
     "json-source-map": "^0.6.1"
   },
   "devDependencies": {
@@ -103,7 +99,7 @@
     "react-dom": "^18.3.1",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3",
-    "vitest": "^2.1.4"
+    "vitest": "^5.0.1"
   },
   "keywords": [
     "foss",
