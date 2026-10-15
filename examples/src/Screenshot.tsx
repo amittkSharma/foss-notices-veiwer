@@ -1,4 +1,4 @@
-import { DiffView, NoticesViewer } from "foss-notices-viewer/react";
+import { DiffView, NoticesViewer } from "@amittksharma/foss-notices-viewer/react";
 import { useEffect } from "react";
 import {
   SCREENSHOT_DIFF_AFTER,

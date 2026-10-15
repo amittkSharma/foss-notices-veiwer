@@ -1,4 +1,4 @@
-# Developing foss-notices-viewer
+# Developing @amittksharma/foss-notices-viewer
 
 This is the contributor-facing doc: how the package is laid out, how to run
 and extend it, and where each feature is proven by a test. See `README.md`
@@ -37,7 +37,7 @@ src/
                              functions: parseByFormat/validateByFormat/checkFormatMatch), plus the
                              NoticesFileFormat type and FORMAT_META/FORMAT_IDS. Statically imports
                              core/adapters/* (cheap) but dynamically imports validation/ by its
-                             *published package name* — `"foss-notices-viewer/validation"`, not a
+                             *published package name* — `"@amittksharma/foss-notices-viewer/validation"`, not a
                              relative "../validation" path — because esbuild's CJS output has no
                              code-splitting: a relative cross-entry dynamic import gets inlined at
                              build time, silently duplicating validation/'s ~230KB of vendored JSON
@@ -163,7 +163,7 @@ src/
                              viewMode="detail" />` — all format-shape-check/validation/
                              parsing lives in core/pipeline.ts, not here.
     styles.css               plain CSS, classes prefixed `fnv-`; copied to dist/styles.css at build time
-    index.ts                 this is the `foss-notices-viewer/react` entry point
+    index.ts                 this is the `@amittksharma/foss-notices-viewer/react` entry point
 
   export/                  Excel + JSON export. Kept as a separate entry point (like validation/
                            below) so core/ and react/ consumers never bundle exceljs unless they
@@ -176,7 +176,7 @@ src/
                             formats share one dynamic import() and exceljs still never leaks in
     validationExcel.ts      exportValidationReportToExcel() — builds a Summary + Issues workbook
                             from a ValidationReport via exceljs
-    index.ts                this is the `foss-notices-viewer/export` entry point
+    index.ts                this is the `@amittksharma/foss-notices-viewer/export` entry point
 
   validation/              schema/structural validation. Pulls in ajv/ajv-formats/json-source-map —
                            kept as a separate entry point so core/ and react/ consumers never bundle
@@ -197,7 +197,7 @@ src/
     blackDuck.ts            validateBlackDuckNotices() — structural checks only (same caveat)
     schemas/                vendored, unmodified copies of the official SPDX/CycloneDX JSON
                             Schemas, plus NOTICE.md documenting their provenance/license
-    index.ts                this is the `foss-notices-viewer/validation` entry point
+    index.ts                this is the `@amittksharma/foss-notices-viewer/validation` entry point
 
   cli/                     the non-React consumption path — a real `commander`-based executable
                            for scripting/CI. Imports only from core/ and export/ (dynamically, same
@@ -402,7 +402,7 @@ when you want to see a change instead of reading assertions:
 
 It is **not** a published part of the package — it's a separate app
 (`examples/package.json`, own `tsconfig.json`) that resolves the
-`foss-notices-viewer` / `foss-notices-viewer/react` / `foss-notices-viewer/validation`
+`foss-notices-viewer` / `@amittksharma/foss-notices-viewer/react` / `@amittksharma/foss-notices-viewer/validation`
 subpaths straight to this repo's `src/` via aliases in `examples/vite.config.ts`
 (and mirrored `paths` in `examples/tsconfig.json`, since Vite and `tsc` resolve
 modules independently). That means it always runs against current source with no
@@ -511,7 +511,7 @@ import was meant to avoid:
   exceljs's real weight, only executes at call-time regardless of which
   chunk contains that line of text.
 - **`core/pipeline.ts`** uses the package's own published name instead:
-  `import("foss-notices-viewer/validation")`, with that exact string added to
+  `import("@amittksharma/foss-notices-viewer/validation")`, with that exact string added to
   `external` in `tsup.config.ts`. This is *required*, not a style choice,
   because `validation/`'s weight (~230KB) is vendored JSON Schema **source**
   (`src/validation/schemas/*.json`), statically imported at module top level
@@ -541,7 +541,7 @@ import was meant to avoid:
   too — esbuild only sees `external` at bundle time and doesn't care, but
   `tsc` still needs to find a declaration to generate the `.d.ts` output, and
   without the `paths` entry it fails with "Could not find a declaration file
-  for module 'foss-notices-viewer/validation'". Production code doesn't need
+  for module '@amittksharma/foss-notices-viewer/validation'". Production code doesn't need
   either alias — they're the dev-time equivalent of the "consumer's own
   node_modules" resolution above. `cli/bin.ts` itself has no `.d.ts` output
   (a CLI has no public API to publish types for — see `tsup.config.ts`'s

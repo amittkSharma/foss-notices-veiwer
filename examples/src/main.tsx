@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "foss-notices-viewer/styles.css";
+import "@amittksharma/foss-notices-viewer/styles.css";
 import "./demo.css";
 import { App } from "./App";
 import { Screenshot } from "./Screenshot";

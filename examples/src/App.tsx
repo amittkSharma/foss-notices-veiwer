@@ -1,5 +1,9 @@
-import type { RiskTier } from "foss-notices-viewer";
-import { DiffView, NoticesFileUpload, NoticesViewer } from "foss-notices-viewer/react";
+import type { RiskTier } from "@amittksharma/foss-notices-viewer";
+import {
+  DiffView,
+  NoticesFileUpload,
+  NoticesViewer,
+} from "@amittksharma/foss-notices-viewer/react";
 import { useState } from "react";
 import { CodeSnippet } from "./CodeSnippet";
 import {
@@ -201,7 +205,7 @@ function AdapterPanel() {
         </label>
       </div>
       <CodeSnippet
-        code={`import { NoticesViewer } from "foss-notices-viewer/react";
+        code={`import { NoticesViewer } from "@amittksharma/foss-notices-viewer/react";
 
 <NoticesViewer
   adapter="${formatId}"
@@ -236,7 +240,7 @@ function UploadPanel() {
         doesn't carry.
       </p>
       <CodeSnippet
-        code={`import { NoticesFileUpload } from "foss-notices-viewer/react";
+        code={`import { NoticesFileUpload } from "@amittksharma/foss-notices-viewer/react";
 
 <NoticesFileUpload />`}
       />
@@ -258,7 +262,7 @@ function DiffPanel() {
         diff.
       </p>
       <CodeSnippet
-        code={`import { DiffView } from "foss-notices-viewer/react";
+        code={`import { DiffView } from "@amittksharma/foss-notices-viewer/react";
 
 <DiffView before={before} after={after} />`}
       />
@@ -304,7 +308,7 @@ function PaginationPanel() {
         </label>
       </div>
       <CodeSnippet
-        code={`import { NoticesViewer } from "foss-notices-viewer/react";
+        code={`import { NoticesViewer } from "@amittksharma/foss-notices-viewer/react";
 
 <NoticesViewer
   document={document}${virtualized ? "\n  virtualized" : ""}

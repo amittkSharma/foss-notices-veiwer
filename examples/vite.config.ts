@@ -14,19 +14,19 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: /^foss-notices-viewer\/styles\.css$/,
+        find: /^@amittksharma\/foss-notices-viewer\/styles\.css$/,
         replacement: path.resolve(dirname, "../src/react/styles.css"),
       },
       {
-        find: /^foss-notices-viewer\/react$/,
+        find: /^@amittksharma\/foss-notices-viewer\/react$/,
         replacement: path.resolve(dirname, "../src/react/index.ts"),
       },
       {
-        find: /^foss-notices-viewer\/validation$/,
+        find: /^@amittksharma\/foss-notices-viewer\/validation$/,
         replacement: path.resolve(dirname, "../src/validation/index.ts"),
       },
       {
-        find: /^foss-notices-viewer$/,
+        find: /^@amittksharma\/foss-notices-viewer$/,
         replacement: path.resolve(dirname, "../src/core/index.ts"),
       },
     ],

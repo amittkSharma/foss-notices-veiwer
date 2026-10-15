@@ -66,7 +66,7 @@ export async function validateByFormat(
   // pipeline. The package-name specifier is left untouched by the bundler (see
   // tsup.config.ts's `external`) and resolves at runtime through the consumer's own
   // node_modules, exactly like importing any other installed package.
-  const validation = await import("foss-notices-viewer/validation");
+  const validation = await import("@amittksharma/foss-notices-viewer/validation");
   switch (format) {
     case "spdx":
       return validation.validateSpdxDocument(text);

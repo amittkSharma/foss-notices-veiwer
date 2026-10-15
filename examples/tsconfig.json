@@ -15,9 +15,9 @@
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
-      "foss-notices-viewer": ["../src/core/index.ts"],
-      "foss-notices-viewer/react": ["../src/react/index.ts"],
-      "foss-notices-viewer/validation": ["../src/validation/index.ts"]
+      "@amittksharma/foss-notices-viewer": ["../src/core/index.ts"],
+      "@amittksharma/foss-notices-viewer/react": ["../src/react/index.ts"],
+      "@amittksharma/foss-notices-viewer/validation": ["../src/validation/index.ts"]
     }
   },
   "include": ["src"]

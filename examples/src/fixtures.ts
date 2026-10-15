@@ -1,4 +1,4 @@
-import type { NoticesDocument } from "foss-notices-viewer";
+import type { NoticesDocument } from "@amittksharma/foss-notices-viewer";
 import blackDuckInvalidRaw from "../../fixtures/blackduck-invalid-sample.txt?raw";
 import blackDuckRaw from "../../fixtures/blackduck-notices-sample.txt?raw";
 import cyclonedxInvalidRaw from "../../fixtures/cyclonedx-invalid-sample.json?raw";

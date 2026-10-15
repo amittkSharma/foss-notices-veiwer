@@ -40,7 +40,7 @@ function downloadBytes(bytes: Uint8Array, filename: string, mimeType: string) {
  * Exports the document's basic per-component fields (name, version, license, risk,
  * author, purl) to a downloaded file. A split button: clicking the main button exports
  * to Excel (unchanged from before JSON existed); the caret opens a menu to choose Excel
- * or JSON instead. Both formats dynamically import `foss-notices-viewer/export` on click,
+ * or JSON instead. Both formats dynamically import `@amittksharma/foss-notices-viewer/export` on click,
  * so exceljs is never pulled into the main bundle for consumers who don't export.
  */
 export function ExportButton({ document: doc, licenseRiskMap, filename }: ExportButtonProps) {

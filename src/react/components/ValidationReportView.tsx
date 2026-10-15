@@ -6,9 +6,9 @@ export interface ValidationReportViewProps {
 }
 
 /**
- * Renders a `ValidationReport` (from `foss-notices-viewer/validation`) as a summary plus a
+ * Renders a `ValidationReport` (from `@amittksharma/foss-notices-viewer/validation`) as a summary plus a
  * list of every issue found, each with its line/column, message, and suggested fix. Takes the
- * report as plain data — import the `validate*` functions from `foss-notices-viewer/validation`
+ * report as plain data — import the `validate*` functions from `@amittksharma/foss-notices-viewer/validation`
  * yourself, so consumers who don't validate never pull ajv into their bundle via this component.
  */
 export function ValidationReportView({ report }: ValidationReportViewProps) {

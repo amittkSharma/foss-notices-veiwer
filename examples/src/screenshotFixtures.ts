@@ -1,4 +1,4 @@
-import type { NoticesDocument } from "foss-notices-viewer";
+import type { NoticesDocument } from "@amittksharma/foss-notices-viewer";
 
 // Hand-built, README-screenshot-only fixtures — deliberately varied (every risk tier, mixed
 // direct/transitive, an author + purl on most rows) so a single screenshot shows the viewer at

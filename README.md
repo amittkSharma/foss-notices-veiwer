@@ -1,4 +1,9 @@
-# foss-notices-viewer
+# @amittksharma/foss-notices-viewer
+
+[![npm version](https://img.shields.io/npm/v/@amittksharma/foss-notices-viewer)](https://www.npmjs.com/package/@amittksharma/foss-notices-viewer)
+[![npm downloads](https://img.shields.io/npm/dm/@amittksharma/foss-notices-viewer)](https://www.npmjs.com/package/@amittksharma/foss-notices-viewer)
+[![license](https://img.shields.io/npm/l/@amittksharma/foss-notices-viewer)](./LICENSE)
+[![node](https://img.shields.io/node/v/@amittksharma/foss-notices-viewer)](https://www.npmjs.com/package/@amittksharma/foss-notices-viewer)
 
 Turn an SBOM or open-source notices file into a searchable, exportable license
 viewer — as a React component, or a CLI for everything else.
@@ -16,14 +21,20 @@ CI check — so you don't have to build one from scratch.
 ## Install
 
 ```bash
-npm install foss-notices-viewer react react-dom
+npm install @amittksharma/foss-notices-viewer react react-dom
 ```
 
 Only need the [CLI](#cli)? Skip `react`/`react-dom`:
 
 ```bash
-npm install -g foss-notices-viewer
+npm install -g @amittksharma/foss-notices-viewer
 ```
+
+The package is scoped, but the commands it installs are still the short `foss-notices-viewer` and `fnv`. Only `npx` needs the full scoped name: `npx @amittksharma/foss-notices-viewer --help`.
+
+### Migrating from `foss-notices-viewer`
+
+The unscoped `foss-notices-viewer` package has moved here. Only the package name changed: replace `foss-notices-viewer` with `@amittksharma/foss-notices-viewer` in your install commands, imports (including `/react`, `/validation`, `/export` and `/styles.css`) and `npx` calls. No other code changes are needed.
 
 ## Supported formats
 
@@ -40,8 +51,8 @@ matrix](#field-support-by-format) below.
 ## Quick start
 
 ```tsx
-import { NoticesViewer } from "foss-notices-viewer/react";
-import "foss-notices-viewer/styles.css";
+import { NoticesViewer } from "@amittksharma/foss-notices-viewer/react";
+import "@amittksharma/foss-notices-viewer/styles.css";
 
 // Pass the raw file contents and the format — the viewer parses and validates it for you
 <NoticesViewer adapter="spdx" document={spdxJsonString} />;
@@ -51,7 +62,7 @@ If you'd rather parse it yourself first (e.g. to inspect or transform the
 data before rendering), the same parsers are available directly:
 
 ```ts
-import { parseSpdxDocument } from "foss-notices-viewer";
+import { parseSpdxDocument } from "@amittksharma/foss-notices-viewer";
 
 const document = parseSpdxDocument(spdxJsonString);
 ```
@@ -91,7 +102,7 @@ an "Export to Excel" button.
 ![Diff view](docs/screenshots/diff.png)
 
 ```tsx
-import { DiffView } from "foss-notices-viewer/react";
+import { DiffView } from "@amittksharma/foss-notices-viewer/react";
 
 <DiffView before={previousReleaseNotices} after={currentReleaseNotices} />;
 ```
@@ -103,7 +114,7 @@ check.
 ## CLI
 
 ```bash
-npm install -g foss-notices-viewer
+npm install -g @amittksharma/foss-notices-viewer
 foss-notices-viewer --help
 ```
 
@@ -137,7 +148,7 @@ risk tier, author, and package URL.
 To build the same file yourself — from a script, or your own button:
 
 ```ts
-import { exportNoticesToExcel, exportNoticesToJson } from "foss-notices-viewer/export";
+import { exportNoticesToExcel, exportNoticesToJson } from "@amittksharma/foss-notices-viewer/export";
 import { writeFileSync } from "node:fs";
 
 writeFileSync("notices.xlsx", await exportNoticesToExcel(document));
@@ -158,13 +169,13 @@ whole file and reports every problem at once, with line numbers and a
 suggested fix for each:
 
 ```ts
-import { validateSpdxDocument } from "foss-notices-viewer/validation";
+import { validateSpdxDocument } from "@amittksharma/foss-notices-viewer/validation";
 
 const report = validateSpdxDocument(spdxJsonString);
 ```
 
 ```tsx
-import { ValidationReportView } from "foss-notices-viewer/react";
+import { ValidationReportView } from "@amittksharma/foss-notices-viewer/react";
 
 <ValidationReportView report={report} />;
 ```

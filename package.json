@@ -1,6 +1,6 @@
 {
-  "name": "foss-notices-viewer",
-  "version": "0.1.0",
+  "name": "@amittksharma/foss-notices-viewer",
+  "version": "1.0.0",
   "description": "Parse SPDX, CycloneDX, generate-license-file, and Black Duck notices output into one normalized model, with React components to search, group, and diff third-party license disclosures.",
   "license": "MIT",
   "author": "Amitt K Sharma",
@@ -111,6 +111,12 @@
     "third-party-notices",
     "black-duck",
     "react",
-    "cli"
-  ]
+    "cli",
+    "sbom-viewer",
+    "react-component",
+    "open-source-compliance"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

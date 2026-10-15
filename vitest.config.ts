@@ -8,7 +8,7 @@ export default defineConfig({
       // the self-referencing package-name import used in NoticesFileUpload.tsx (see its comment
       // and tsup.config.ts's `external`) — at runtime that resolves through the consumer's own
       // node_modules instead.
-      "foss-notices-viewer/validation": fileURLToPath(
+      "@amittksharma/foss-notices-viewer/validation": fileURLToPath(
         new URL("./src/validation/index.ts", import.meta.url),
       ),
     },

@@ -9,7 +9,7 @@
       // self-link in this dev repo, so tsup's `dts` step (unlike Node at runtime, or a real
       // consumer's own node_modules) can't otherwise resolve this package's own published-name
       // specifier back to itself — see DEVELOPMENT.md's "Cross-entry dynamic imports".
-      "foss-notices-viewer/validation": ["./src/validation/index.ts"]
+      "@amittksharma/foss-notices-viewer/validation": ["./src/validation/index.ts"]
     },
     "jsx": "react-jsx",
     "declaration": true,

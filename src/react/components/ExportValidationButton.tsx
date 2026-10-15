@@ -9,7 +9,7 @@ export interface ExportValidationButtonProps {
 
 /**
  * Exports a `ValidationReport` (Summary + Issues sheets) to a downloaded .xlsx file.
- * Dynamically imports `foss-notices-viewer/export` on click, so exceljs is never
+ * Dynamically imports `@amittksharma/foss-notices-viewer/export` on click, so exceljs is never
  * pulled into the main bundle for consumers who don't export.
  */
 export function ExportValidationButton({ report, filename }: ExportValidationButtonProps) {
